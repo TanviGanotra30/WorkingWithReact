@@ -3,7 +3,7 @@ function customRender(reactElement,container){
     //so we will use loop
 
     // const domElement=document.createElement(reactElement.type)
-    // domElement.innerHTML=reactElement.childern
+    // domElement.innerHTML=reactElement.children
     // domElement.setAttribute('href',reactElement.props.href)
     // domElement.setAttribute('target',reactElement.props.target)
 
@@ -11,12 +11,12 @@ function customRender(reactElement,container){
 
 
     const domElement=document.createElement(reactElement.type)
-    domElement.innerHTML=reactElement.childern
+    domElement.innerHTML=reactElement.children
 
     const propKeys = Object.keys(reactElement.props);
     for(let i = 0; i < propKeys.length; i++) {
         const prop = propKeys[i];
-        if(prop === 'childern') continue;
+        if(prop === 'children') continue;
         domElement.setAttribute(prop, reactElement.props[prop]);
     }
     container.appendChild(domElement)
@@ -28,7 +28,7 @@ const reactElement={
         href: 'https://google.com',
         target: '_blank'
     },
-    childern: 'Click me to visit google'
+    children: 'Click me to visit google'
 }
 
 const mainContainer=document.getElementById("root");
