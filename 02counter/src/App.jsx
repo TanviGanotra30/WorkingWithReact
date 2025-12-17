@@ -9,7 +9,7 @@ function App() {
   
   let [counter,setCounter]=useState(5);        //useState is a hook 
   const addValue = () => {                    //hence react holds UI 
-    if(counter<1){
+    if(counter<0){
     alert("Counter cannot be negative"); 
     }else{
       setCounter(counter + 1);
